@@ -42,37 +42,20 @@ export default function Header3({ links }) {
         <ul className="clearlist scroll-nav local-scroll justify-content-end scrollspyLinks">
           <Nav animateY links={links} />
           <li>
-            {links[0]?.subMenu ? (
-              <Link href="/booking" className="opacity-1 no-hover">
-                <span
-                  className="btn btn-mod btn-medium btn-border-w btn-circle-alt"
-                  data-btn-animate="y"
-                  style={{border: '1px solid #ffe066'}}
-                >
-                  <span className="btn-animate-y">
-                    <span className="btn-animate-y-1">Book Now</span>
-                    <span className="btn-animate-y-2" aria-hidden="true">
-                      Book Now
-                    </span>
+            <Link href="/booking" className="opacity-1 no-hover">
+              <span
+                className="btn btn-mod btn-medium btn-border-w btn-circle-alt"
+                data-btn-animate="y"
+                style={{border: '1px solid #ffe066'}}
+              >
+                <span className="btn-animate-y">
+                  <span className="btn-animate-y-1">Book Now</span>
+                  <span className="btn-animate-y-2" aria-hidden="true">
+                    Book Now
                   </span>
                 </span>
-              </Link>
-            ) : (
-              <a href="#contact" className="opacity-1 no-hover">
-                <span
-                  className="btn btn-mod btn-medium btn-border-w btn-circle-alt"
-                  data-btn-animate="y"
-                  style={{border: '1px solid #ffe066'}}
-                >
-                  <span className="btn-animate-y">
-                    <span className="btn-animate-y-1">Book Now</span>
-                    <span className="btn-animate-y-2" aria-hidden="true">
-                      Book Now
-                    </span>
-                  </span>
-                </span>
-              </a>
-            )}
+              </span>
+            </Link>
           </li>
         </ul>
       </div>
