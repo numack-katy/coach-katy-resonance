@@ -1,7 +1,7 @@
 import { getAllPosts } from '@/lib/sanity';
 
 export default async function sitemap() {
-  const baseUrl = 'https://coachkaty.help';
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://coachkaty.help';
 
   // Get all blog posts
   const posts = await getAllPosts();
@@ -64,7 +64,12 @@ export default async function sitemap() {
       changeFrequency: 'yearly',
       priority: 0.9,
     },
-    // Note: johnson-city-tennessee-coaching is excluded as it has noindex
+    {
+      url: `${baseUrl}/johnson-city-tennessee-coaching`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
   ];
 
   return [...routes, ...blogUrls];

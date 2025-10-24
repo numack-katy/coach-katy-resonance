@@ -16,10 +16,13 @@ export const metadata = {
     "Contact - Coach Katy | Get In Touch",
   description:
     "Ready to start your neurodivergent coaching journey? Contact Coach Katy for personalized support. I typically respond within 24-48 hours.",
+  alternates: {
+    canonical: 'https://coachkaty.help/contact',
+  },
   openGraph: {
     title: "Contact - Coach Katy | Get In Touch",
     description: "Ready to start your neurodivergent coaching journey? Contact Coach Katy for personalized support. I typically respond within 24-48 hours.",
-    url: "https://coachkaty.help/brutalist-contact-dark",
+    url: "https://coachkaty.help/contact",
     siteName: "Coach Katy",
     images: [
       {

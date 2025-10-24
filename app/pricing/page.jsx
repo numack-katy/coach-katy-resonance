@@ -14,10 +14,13 @@ export const metadata = {
     "Equity Pricing - Coach Katy | Accessible Coaching Rates",
   description:
     "Coaching shouldn't be out of reach. Choose from tiered pricing options based on your financial situation. Neurodivergent affirming coaching that fits your budget.",
+  alternates: {
+    canonical: 'https://coachkaty.help/pricing',
+  },
   openGraph: {
     title: "Equity Pricing - Coach Katy | Accessible Coaching Rates",
     description: "Coaching shouldn't be out of reach. Choose from tiered pricing options based on your financial situation. Neurodivergent affirming coaching that fits your budget.",
-    url: "https://coachkaty.help/main-pages-pricing-1-dark",
+    url: "https://coachkaty.help/pricing",
     siteName: "Coach Katy",
     images: [
       {

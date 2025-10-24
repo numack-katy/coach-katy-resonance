@@ -11,10 +11,13 @@ import BlogNewsletterForm from "@/components/newsletterForms/BlogNewsletterForm"
 export const metadata = {
   title: "Neurodivergent Life Coaching Blog | Coach Katy",
   description: "Read articles on neurodivergent life, coaching, wellness, self-acceptance, and personal development to support your journey.",
+  alternates: {
+    canonical: 'https://coachkaty.help/blog',
+  },
   openGraph: {
     title: "Neurodivergent Life Coaching Blog | Coach Katy",
     description: "Read articles on neurodivergent life, coaching, wellness, self-acceptance, and personal development to support your journey.",
-    url: "https://coachkaty.help/brutalist-blog-dark",
+    url: "https://coachkaty.help/blog",
     siteName: "Coach Katy",
     images: [
       {
@@ -71,6 +74,7 @@ export default async function BrutalistBlogPageDark() {
                         alt=""
                         width={35}
                         height={35}
+                        priority
                       />
                     </span>
                   </h1>
@@ -85,7 +89,7 @@ export default async function BrutalistBlogPageDark() {
                   <div className="container position-relative">
                     {allPosts.length > 0 ? (
                       <div className="row gx-5 mt-n50 mt-sm-n30 mb-50 mb-sm-30">
-                        {allPosts.map((post) => (
+                        {allPosts.map((post, index) => (
                           <div
                             key={post._id}
                             className="post-prev-1 col-lg-6 mt-50 mt-sm-30"
@@ -95,7 +99,8 @@ export default async function BrutalistBlogPageDark() {
                                 <Link href={`/posts/${post.slug.current}`}>
                                   <Image
                                     src={post.mainImage.asset.url}
-                                    loading="lazy"
+                                    priority={index < 2}
+                                    loading={index < 2 ? undefined : "lazy"}
                                     width={750}
                                     height={400}
                                     alt={post.mainImage.alt || post.title}

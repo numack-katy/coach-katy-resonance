@@ -1,5 +1,6 @@
 export function init_wow() {
   const { WOW } = require("wowjs");
+  // Reduced delay from 400ms to 100ms for smoother initial load
   setTimeout(() => {
     /* Wow init */
     if (document.body.classList.contains("appear-animate")) {
@@ -68,5 +69,5 @@ export function init_wow() {
         .querySelectorAll(".wow-menubar")
         .forEach((el) => (el.style.opacity = "1"));
     }
-  }, 400);
+  }, 100);
 }

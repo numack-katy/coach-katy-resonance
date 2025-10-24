@@ -13,10 +13,13 @@ export const metadata = {
     "ADHD & Autism Coaching Services for Adults | Coach Katy",
   description:
     "Individual coaching for neurodivergent adults navigating burnout, identity shifts & authentic living. 1:1 sessions, group programs, and peer support.",
+  alternates: {
+    canonical: 'https://coachkaty.help/services',
+  },
   openGraph: {
     title: "ADHD & Autism Coaching Services for Adults | Coach Katy",
     description: "Individual coaching for neurodivergent adults navigating burnout, identity shifts & authentic living. 1:1 sessions, group programs, and peer support.",
-    url: "https://coachkaty.help/brutalist-services-dark",
+    url: "https://coachkaty.help/services",
     siteName: "Coach Katy",
     images: [
       {

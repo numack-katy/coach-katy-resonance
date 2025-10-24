@@ -9,7 +9,31 @@ import ParallaxContainer from "@/components/common/ParallaxContainer";
 export const metadata = {
   title: "Neurodivergent Life Coach in Johnson City, Tennessee | Coach Katy",
   description: "Autistic life coach serving Johnson City, Kingsport, Bristol, and the Tri-Cities area of Tennessee. Neurodivergent-affirming coaching for autistic and ADHD adults in East Tennessee.",
-  robots: "noindex, nofollow",
+  alternates: {
+    canonical: 'https://coachkaty.help/johnson-city-tennessee-coaching',
+  },
+  openGraph: {
+    title: "Neurodivergent Life Coach in Johnson City, Tennessee | Coach Katy",
+    description: "Autistic life coach serving Johnson City, Kingsport, Bristol, and the Tri-Cities area of Tennessee. Neurodivergent-affirming coaching for autistic and ADHD adults in East Tennessee.",
+    url: "https://coachkaty.help/johnson-city-tennessee-coaching",
+    siteName: "Coach Katy",
+    images: [
+      {
+        url: "https://coachkaty.help/katy1.webp",
+        width: 1200,
+        height: 630,
+        alt: "Coach Katy - Neurodivergent Life Coach serving Johnson City, TN",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Neurodivergent Life Coach in Johnson City, Tennessee | Coach Katy",
+    description: "Autistic life coach serving Johnson City, Kingsport, Bristol, and the Tri-Cities area of Tennessee. Neurodivergent-affirming coaching for autistic and ADHD adults in East Tennessee.",
+    images: ["https://coachkaty.help/katy1.webp"],
+  },
 };
 
 export default function JohnsonCityTennesseePage() {
@@ -84,7 +108,7 @@ export default function JohnsonCityTennesseePage() {
 
                         <div className="mt-60 text-center">
                           <Link
-                            href="/brutalist-contact-dark"
+                            href="/contact"
                             className="btn btn-mod btn-large btn-w btn-hover-anim"
                           >
                             <span>Schedule Your Free Consultation</span>
@@ -122,7 +146,7 @@ export default function JohnsonCityTennesseePage() {
                         <p style={{fontSize: '17px', lineHeight: '1.7', color: '#f9f5f0', marginBottom: '30px'}}>
                           Read my story and how I approach coaching
                         </p>
-                        <Link href="/brutalist-about-dark" className="link-hover-anim" data-link-animate="y">
+                        <Link href="/about" className="link-hover-anim" data-link-animate="y">
                           <span className="link-strong link-strong-unhovered" style={{color: '#ffe066'}}>About Me</span>
                         </Link>
                       </div>
@@ -137,7 +161,7 @@ export default function JohnsonCityTennesseePage() {
                         <p style={{fontSize: '17px', lineHeight: '1.7', color: '#f9f5f0', marginBottom: '30px'}}>
                           Explore what coaching looks like
                         </p>
-                        <Link href="/brutalist-services-dark" className="link-hover-anim" data-link-animate="y">
+                        <Link href="/services" className="link-hover-anim" data-link-animate="y">
                           <span className="link-strong link-strong-unhovered" style={{color: '#ffe066'}}>View Services</span>
                         </Link>
                       </div>
@@ -152,7 +176,7 @@ export default function JohnsonCityTennesseePage() {
                         <p style={{fontSize: '17px', lineHeight: '1.7', color: '#f9f5f0', marginBottom: '30px'}}>
                           Transparent, accessible pricing
                         </p>
-                        <Link href="/main-pages-pricing-1-dark" className="link-hover-anim" data-link-animate="y">
+                        <Link href="/pricing" className="link-hover-anim" data-link-animate="y">
                           <span className="link-strong link-strong-unhovered" style={{color: '#ffe066'}}>View Pricing</span>
                         </Link>
                       </div>

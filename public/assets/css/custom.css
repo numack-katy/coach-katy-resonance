@@ -1,9 +1,16 @@
-/* Prevent flash of unstyled content */
+/* Smooth initial page load - show content immediately, animate in smoothly */
 body {
-  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease-in;
 }
 body.loaded {
-  visibility: visible;
+  opacity: 1;
+}
+
+/* Ensure critical content (navigation, hero) is visible immediately */
+.main-nav,
+.page-section:first-of-type {
+  opacity: 1 !important;
 }
 
 .Typewriter,

@@ -11,10 +11,13 @@ export const metadata = {
     "About Katy - Late-Diagnosed Autistic Life Coach | Tennessee",
   description:
     "Meet Katy: late-diagnosed autistic coach who left therapy to provide neurodivergent-affirming support. Real experience, practical tools, no masking required.",
+  alternates: {
+    canonical: 'https://coachkaty.help/about',
+  },
   openGraph: {
     title: "About Katy - Late-Diagnosed Autistic Life Coach",
     description: "Meet Katy: late-diagnosed autistic coach who left therapy to provide neurodivergent-affirming support. Real experience, practical tools, no masking required.",
-    url: "https://coachkaty.help/brutalist-about-dark",
+    url: "https://coachkaty.help/about",
     siteName: "Coach Katy",
     images: [
       {

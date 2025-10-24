@@ -1,10 +1,12 @@
 export default function robots() {
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://coachkaty.help';
+
   return {
     rules: {
       userAgent: '*',
       allow: '/',
-      disallow: ['/johnson-city-tennessee-coaching'],
+      disallow: [],
     },
-    sitemap: 'https://coachkaty.help/sitemap.xml',
+    sitemap: `${baseUrl}/sitemap.xml`,
   };
 }

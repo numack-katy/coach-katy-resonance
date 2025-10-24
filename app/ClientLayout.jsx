@@ -9,9 +9,11 @@ export default function ClientLayout({ children }) {
   const path = usePathname();
 
   useEffect(() => {
-    // Show the page once everything is loaded
-    document.body.classList.add('loaded');
-    
+    // Add loaded class immediately for faster visual feedback
+    requestAnimationFrame(() => {
+      document.body.classList.add('loaded');
+    });
+
     init_wow();
     parallaxMouseMovement();
     var mainNav = document.querySelector(".main-nav");

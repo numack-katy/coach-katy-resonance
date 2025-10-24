@@ -31,6 +31,33 @@ export async function generateMetadata({ params }) {
   return {
     title: `${post.title} | Coach Katy Blog`,
     description: post.excerpt || `Read ${post.title} on the Coach Katy blog`,
+    alternates: {
+      canonical: `https://coachkaty.help/posts/${slug}`,
+    },
+    openGraph: {
+      title: `${post.title} | Coach Katy Blog`,
+      description: post.excerpt || `Read ${post.title} on the Coach Katy blog`,
+      url: `https://coachkaty.help/posts/${slug}`,
+      siteName: "Coach Katy",
+      images: post.mainImage ? [
+        {
+          url: post.mainImage.asset.url,
+          width: 1200,
+          height: 630,
+          alt: post.mainImage.alt || post.title,
+        },
+      ] : [],
+      locale: "en_US",
+      type: "article",
+      publishedTime: post.publishedAt,
+      authors: post.author ? [post.author] : [],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${post.title} | Coach Katy Blog`,
+      description: post.excerpt || `Read ${post.title} on the Coach Katy blog`,
+      images: post.mainImage ? [post.mainImage.asset.url] : [],
+    },
   };
 }
 
@@ -44,8 +71,39 @@ export default async function BlogPostPage({ params }) {
 
   const htmlContent = renderPortableText(post.body);
 
+  // Article Schema for SEO
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": post.title,
+    "description": post.excerpt || "",
+    "image": post.mainImage ? post.mainImage.asset.url : "",
+    "datePublished": post.publishedAt,
+    "dateModified": post._updatedAt || post.publishedAt,
+    "author": {
+      "@type": "Person",
+      "name": post.author || "Katy Welborn"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Coach Katy",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://coachkaty.help/katy1.webp"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": `https://coachkaty.help/posts/${slug}`
+    }
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
       <div className="theme-brutalist">
         <div className="dark-mode">
           <div className="page bg-dark-1" id="top">
@@ -118,7 +176,7 @@ export default async function BlogPostPage({ params }) {
 
                       {/* Back to Blog Link */}
                       <div className="mt-80 pt-40" style={{borderTop: '1px solid rgba(249, 245, 240, 0.2)'}}>
-                        <Link href="/brutalist-blog-dark" className="link-hover-anim" data-link-animate="y">
+                        <Link href="/blog" className="link-hover-anim" data-link-animate="y">
                           <span className="link-strong link-strong-unhovered" style={{color: '#ffe066'}}>
                             ← Back to Blog
                           </span>

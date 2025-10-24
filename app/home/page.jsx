@@ -7,10 +7,14 @@ import dynamic from "next/dynamic";
 import ParallaxContainer from "@/components/common/ParallaxContainer";
 import Image from "next/image";
 export const metadata = {
+  metadataBase: new URL('https://coachkaty.help'),
   title:
     "Neurodivergent Affirming Coaching by Katy | Life Coach for Autistic & ADHD Adults",
   description:
     "Neurodivergent-affirming life coaching for late-diagnosed autistic and ADHD adults. Coaching that understands neurodivergent life because I'm living it too.",
+  alternates: {
+    canonical: 'https://coachkaty.help',
+  },
   openGraph: {
     title: "Neurodivergent Affirming Coaching by Katy | Life Coach for Autistic & ADHD Adults",
     description: "Neurodivergent-affirming life coaching for late-diagnosed autistic and ADHD adults. Coaching that understands neurodivergent life because I'm living it too.",
@@ -79,6 +83,7 @@ export default function Home3MainDemoOnepageDark() {
                     width={80}
                     height={80}
                     alt=""
+                    priority
                     style={{
                       opacity: 0.3,
                       filter: 'invert(76%) sepia(61%) saturate(413%) hue-rotate(350deg) brightness(106%) contrast(101%)',
