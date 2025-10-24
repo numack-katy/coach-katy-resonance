@@ -1,16 +1,9 @@
-/* Smooth initial page load - show content immediately, animate in smoothly */
+/* Prevent flash of unstyled content - use visibility to not interfere with WOW.js animations */
 body {
-  opacity: 0;
-  transition: opacity 0.3s ease-in;
+  visibility: hidden;
 }
 body.loaded {
-  opacity: 1;
-}
-
-/* Ensure critical content (navigation, hero) is visible immediately */
-.main-nav,
-.page-section:first-of-type {
-  opacity: 1 !important;
+  visibility: visible;
 }
 
 .Typewriter,
