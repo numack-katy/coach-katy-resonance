@@ -1,8 +1,8 @@
-import Footer1 from "@/components/footers/Footer1";
+import Footer3 from "@/components/footers/Footer3";
 import Link from "next/link";
 import ParallaxContainer from "@/components/common/ParallaxContainer";
 
-import Header1Multipage from "@/components/headers/Header1Multipage";
+import Header3 from "@/components/headers/Header3";
 import AnimatedText from "@/components/common/AnimatedText";
 import Image from "next/image";
 
@@ -24,7 +24,7 @@ export default function MainAboutPage1Dark() {
         <div className="dark-mode">
           <div className="page bg-dark-1" id="top">
             <nav className="main-nav dark dark-mode transparent stick-fixed wow-menubar">
-              <Header1Multipage links={menuItemsDark} />
+              <Header3 links={menuItemsDark} />
             </nav>
             <main id="main">
               <section className="page-section pt-0 pb-0" id="home">
@@ -109,7 +109,7 @@ export default function MainAboutPage1Dark() {
                       <div className="col-md-4 col-lg-3 text-md-end">
                         <div className="local-scroll">
                           <Link
-                            href={`/main-pages-contact-1`}
+                            href={`/contact`}
                             className="btn btn-mod btn-white btn-large btn-round btn-hover-anim"
                           >
                             <span>Contact us</span>
@@ -121,7 +121,7 @@ export default function MainAboutPage1Dark() {
                 </section>
               </>
             </main>
-            <Footer1 dark />
+            <Footer3 dark />
           </div>{" "}
         </div>
       </div>

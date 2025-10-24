@@ -1,9 +1,10 @@
 import { withAuth } from 'next-auth/middleware'
+import { NextResponse } from 'next/server'
 
 export default withAuth(
-  function middleware(req) {
-    // Optional: Add additional middleware logic here
-    return null
+  function proxy(req) {
+    // Optional: Add additional proxy logic here
+    return NextResponse.next()
   },
   {
     callbacks: {

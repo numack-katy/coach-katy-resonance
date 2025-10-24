@@ -12,7 +12,7 @@ export default function Header3({ links }) {
               If you use a PNG logo image, the image resolution must be equal 200% of the visible logo
               image size for support of retina screens. See details in the template documentation. *) */}
       <div className="nav-logo-wrap local-scroll">
-        <a href="/brutalist-multi-page-dark" className="logo font-alt" style={{padding: '10px'}}>
+        <a href="/home" className="logo font-alt" style={{padding: '10px'}}>
           <Image
             src="/coach.svg"
             alt="Coach Katy - Neurodivergent Life Coach"
@@ -42,7 +42,7 @@ export default function Header3({ links }) {
         <ul className="clearlist scroll-nav local-scroll justify-content-end scrollspyLinks">
           <Nav animateY links={links} />
           <li>
-            {links[0].href.includes("/") ? (
+            {links[0]?.subMenu ? (
               <Link href="/brutalist-booking-dark" className="opacity-1 no-hover">
                 <span
                   className="btn btn-mod btn-medium btn-border-w btn-circle-alt"

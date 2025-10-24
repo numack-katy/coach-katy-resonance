@@ -26,7 +26,7 @@ export default function Footer3() {
         <div className="col-lg-6 fw-social-inline text-center mb-md-40">
           <div className="fw-social-inline-item">
             <a
-              href="/brutalist-about-dark"
+              href="/about"
               className="link-hover-anim align-middle"
               data-link-animate="y"
             >
@@ -36,7 +36,7 @@ export default function Footer3() {
           </div>
           <div className="fw-social-inline-item">
             <a
-              href="/brutalist-services-dark"
+              href="/services"
               className="link-hover-anim align-middle"
               data-link-animate="y"
             >
@@ -46,7 +46,7 @@ export default function Footer3() {
           </div>
           <div className="fw-social-inline-item">
             <a
-              href="/main-pages-pricing-1-dark"
+              href="/pricing"
               className="link-hover-anim align-middle"
               data-link-animate="y"
             >
@@ -56,7 +56,7 @@ export default function Footer3() {
           </div>
           <div className="fw-social-inline-item">
             <a
-              href="/brutalist-contact-dark"
+              href="/contact"
               className="link-hover-anim align-middle"
               data-link-animate="y"
             >
