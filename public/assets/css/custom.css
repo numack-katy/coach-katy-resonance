@@ -1,3 +1,11 @@
+/* Prevent flash of unstyled content */
+body {
+  visibility: hidden;
+}
+body.loaded {
+  visibility: visible;
+}
+
 .Typewriter,
 .typewrite {
   display: inline-block;

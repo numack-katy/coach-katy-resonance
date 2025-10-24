@@ -194,7 +194,6 @@ export const brutalistMultipageDark = [
   { href: "/pricing", text: "Pricing", active: false },
   { href: "/blog", text: "Blog", active: false },
   { href: "/contact", text: "Contact", active: false },
-  { href: "/booking", text: "Booking", active: false },
 ];
 export const brutalistOnepage = [
   { href: "#home", text: "Home", className: "active", dataBtnAnimate: "y" },

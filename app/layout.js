@@ -1,46 +1,13 @@
-"use client";
-import { useEffect } from "react";
-import "swiper/css";
 import "../public/assets/css/styles.css";
+import "swiper/css";
 import "jarallax/dist/jarallax.min.css";
 import "swiper/css/effect-fade";
-
 import "photoswipe/dist/photoswipe.css";
-import { usePathname } from "next/navigation";
-import { parallaxMouseMovement, parallaxScroll } from "@/utlis/parallax";
-
 import "tippy.js/dist/tippy.css";
-import { init_wow } from "@/utlis/initWowjs";
-import { headerChangeOnScroll } from "@/utlis/changeHeaderOnScroll";
 import SchemaMarkup from "@/components/common/SchemaMarkup";
+import ClientLayout from "./ClientLayout";
 
 export default function RootLayout({ children }) {
-  const path = usePathname();
-
-  useEffect(() => {
-    init_wow();
-    parallaxMouseMovement();
-    var mainNav = document.querySelector(".main-nav");
-    if (mainNav?.classList.contains("transparent")) {
-      mainNav.classList.add("js-transparent");
-    } else if (!mainNav?.classList?.contains("dark")) {
-      mainNav?.classList.add("js-no-transparent-white");
-    }
-
-    window.addEventListener("scroll", headerChangeOnScroll);
-    parallaxScroll();
-    return () => {
-      window.removeEventListener("scroll", headerChangeOnScroll);
-    };
-  }, [path]);
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      // Import the script only on the client side
-      import("bootstrap/dist/js/bootstrap.esm").then(() => {
-        // Module is imported, you can access any exported functionality if
-      });
-    }
-  }, []);
 
   return (
     <html lang="en" className="no-mobile no-touch ">
@@ -78,7 +45,9 @@ export default function RootLayout({ children }) {
           defer
         />
       </head>
-      <body className="appear-animate body">{children}</body>
+      <body className="appear-animate body">
+        <ClientLayout>{children}</ClientLayout>
+      </body>
     </html>
   );
 }

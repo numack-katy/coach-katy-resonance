@@ -90,7 +90,7 @@ export default function Home3({ onePage = false, dark = false }) {
       <div className="position-relative" style={{backgroundColor: '#2c2b30', padding: '60px 0'}}>
         <div className="container text-center">
           <Image
-            src="/brutalistwaves.svg"
+            src="/Brutalistwaves.svg"
             width={448}
             height={488}
             alt=""
