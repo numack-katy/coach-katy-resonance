@@ -17,10 +17,10 @@ export default function MainAboutPage1() {
                 <div className="nav-logo-wrap local-scroll">
                   <Link href={`/`} className="logo font-alt">
                     <Image
-                      src="/assets/images/demo-brutalist/logo-white.svg"
+                      src="/Coachlogo.svg"
                       alt="Coach Katy"
                       width={176}
-                      height={34}
+                      height={50}
                     />
                   </Link>
                 </div>
