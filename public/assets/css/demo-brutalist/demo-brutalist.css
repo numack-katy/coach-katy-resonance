@@ -1,0 +1,664 @@
+.theme-brutalist {
+  --font-global: "Poppins", sans-serif;
+  --font-alt: "Epilogue", sans-serif;
+  --container-width: 1300px;
+  --section-padding-y: 160px;
+
+  /* Custom Color Palette - Neurodivergent Coaching Brand */
+  --color-fog-cream: #f9f5f0;
+  --color-dusky-plum: #77599f;
+  --color-shadow-lavender: #5c476b;
+  --color-dusty-rose: #c476c1;
+  --color-raspberry-smoke: #a75ba5;
+  --color-midnight-moss: #2c2b30;
+  --color-charcoal-violet: #1d1d1d;
+  --color-glint-gold: #ffe066;
+
+  /* Override default dark colors with custom palette */
+  --color-dark-1: var(--color-midnight-moss);
+  --color-dark-2: var(--color-charcoal-violet);
+  --color-dark-3: var(--color-shadow-lavender);
+  --color-gray-1: #777;
+
+  /* Accent Colors for Links, Buttons, and Interactive Elements */
+  --color-link: var(--color-dusky-plum);
+  --color-link-hover: var(--color-dusty-rose);
+  --color-primary: var(--color-dusky-plum);
+  --color-primary-hover: var(--color-raspberry-smoke);
+  --color-accent: var(--color-glint-gold);
+  --color-border: var(--color-raspberry-smoke);
+  --gradient-primary-1: linear-gradient(
+    90deg,
+    var(--color-primary-4) 0%,
+    var(--color-primary-3) 33%,
+    var(--color-primary-2) 67%,
+    var(--color-primary-1) 100%
+  );
+  --gradient-primary-1-a: linear-gradient(
+    90deg,
+    var(--color-primary-4) 25%,
+    var(--color-primary-3) 40%,
+    var(--color-primary-2) 60%,
+    var(--color-primary-1) 75%
+  );
+  --gradient-primary-1-b: linear-gradient(
+    45deg,
+    var(--color-primary-4) 0%,
+    var(--color-primary-3) 33%,
+    var(--color-primary-2) 67%,
+    var(--color-primary-1) 100%
+  );
+  --gradient-primary-1-c: linear-gradient(
+    0deg,
+    var(--color-primary-4) 0%,
+    var(--color-primary-3) 33%,
+    var(--color-primary-2) 67%,
+    var(--color-primary-1) 100%
+  );
+  --gradient-gray-light-1: linear-gradient(0deg, #f5f5f5 0%, #fff 100%);
+  --gradient-gray-light-2: linear-gradient(0deg, #fff 0%, #f5f5f5 100%);
+  --gradient-dark-alpha-1: linear-gradient(
+    90deg,
+    var(--color-dark-1) 40%,
+    transparent 87%
+  );
+  --gradient-dark-alpha-2: linear-gradient(
+    90deg,
+    transparent 13%,
+    var(--color-dark-1) 60%
+  );
+  --gradient-primary-alpha-1: linear-gradient(
+    90deg,
+    var(--color-primary-1) 40%,
+    transparent 87%
+  );
+  --gradient-primary-alpha-2: linear-gradient(
+    90deg,
+    transparent 13%,
+    var(--color-primary-1) 60%
+  );
+  color: var(--color-dark-1);
+  font-family: var(--font-global);
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: normal;
+  line-height: 1.67;
+}
+
+/* Apply Accent Colors to Interactive Elements */
+.theme-brutalist a {
+  color: var(--color-dusky-plum);
+  transition: color 0.3s ease;
+}
+.theme-brutalist a:hover {
+  color: var(--color-dusty-rose);
+}
+
+/* Light content text readability */
+.theme-brutalist .light-content {
+  color: var(--color-fog-cream);
+}
+.theme-brutalist .light-content h1,
+.theme-brutalist .light-content h2,
+.theme-brutalist .light-content h3,
+.theme-brutalist .light-content h4,
+.theme-brutalist .light-content h5,
+.theme-brutalist .light-content h6 {
+  color: var(--color-fog-cream);
+}
+.theme-brutalist .light-content p {
+  color: var(--color-fog-cream);
+  opacity: 0.95;
+}
+
+/* Buttons and CTAs */
+.theme-brutalist .btn-mod,
+.theme-brutalist .submit-button {
+  background-color: var(--color-dusky-plum);
+  border-color: var(--color-dusky-plum);
+  color: var(--color-fog-cream);
+  transition: all 0.3s ease;
+}
+.theme-brutalist .btn-mod:hover,
+.theme-brutalist .submit-button:hover {
+  background-color: var(--color-raspberry-smoke);
+  border-color: var(--color-raspberry-smoke);
+  color: var(--color-fog-cream);
+  transform: translateY(-2px);
+}
+
+/* Special Gold CTA */
+.theme-brutalist .btn-mod.btn-gold {
+  background-color: var(--color-glint-gold);
+  border-color: var(--color-glint-gold);
+  color: var(--color-midnight-moss);
+  font-weight: 600;
+}
+.theme-brutalist .btn-mod.btn-gold:hover {
+  background-color: var(--color-dusty-rose);
+  border-color: var(--color-dusty-rose);
+  color: var(--color-fog-cream);
+}
+
+/* Link animations */
+.theme-brutalist .link-hover-anim {
+  color: var(--color-dusky-plum);
+  transition: all 0.3s ease;
+}
+.theme-brutalist .link-hover-anim:hover {
+  color: var(--color-dusty-rose);
+}
+
+/* Text decorations - Enhanced Circle Effect (matches business cards!) */
+.theme-brutalist .mark-decoration-2 {
+  position: relative;
+  z-index: 1;
+}
+.theme-brutalist .mark-decoration-2:before {
+  border-color: var(--color-dusty-rose) !important;
+  border-width: 2px !important;
+  opacity: 1 !important;
+  z-index: -1 !important;
+}
+.theme-brutalist .light-content .mark-decoration-2:before {
+  border-color: var(--color-dusty-rose) !important;
+  opacity: 0.9 !important;
+  z-index: -1 !important;
+}
+
+/* Alternative: Add a thicker, more prominent underline style */
+.theme-brutalist .mark-decoration-3 {
+  background-image: linear-gradient(
+    to right,
+    var(--color-glint-gold) 0%,
+    var(--color-glint-gold) 100%
+  );
+  background-size: 100% 12px;
+  background-position: 0 88%;
+  background-repeat: no-repeat;
+  padding-bottom: 6px;
+}
+
+/* Circled text effect - for special emphasis */
+.theme-brutalist .text-circled {
+  position: relative;
+  display: inline-block;
+  padding: 8px 16px;
+}
+.theme-brutalist .text-circled::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(100% + 20px);
+  height: calc(100% + 20px);
+  border: 3px solid var(--color-dusty-rose);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+/* Box highlight effect - another brutalist option */
+.theme-brutalist .text-boxed {
+  background-color: var(--color-dusty-rose);
+  color: var(--color-midnight-moss);
+  padding: 4px 12px;
+  display: inline-block;
+  font-weight: 600;
+}
+
+/* Value hover boxes */
+.theme-brutalist .value-hover-box:hover {
+  border-color: var(--color-dusty-rose) !important;
+  transform: translateY(-5px);
+}
+
+/* Hide the X in services-2-button-close and show only the star */
+.theme-brutalist .services-2-button-close::before,
+.theme-brutalist .services-2-button-close::after {
+  display: none !important;
+}
+
+/* START HERE service cards hover effects */
+.theme-brutalist .services-2-item {
+  transition: box-shadow 0.3s ease-out, transform 0.3s ease-out;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+}
+
+.theme-brutalist .services-2-item .services-2-icon {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  margin-bottom: 0;
+}
+
+/* Override for contact page cards - center the icons */
+.theme-brutalist .services-2-item.contact-card .services-2-icon {
+  position: relative;
+  top: auto;
+  left: auto;
+  margin-bottom: 30px;
+}
+
+.theme-brutalist .services-2-item .services-2-title {
+  margin-top: 60px;
+  margin-bottom: 15px;
+  width: 100%;
+  text-align: center;
+}
+
+.theme-brutalist .services-2-item .services-2-text {
+  margin-bottom: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+.theme-brutalist .services-2-item .services-2-link {
+  margin-top: auto;
+  width: 100%;
+  text-align: center;
+}
+
+.theme-brutalist .services-2-item:hover {
+  box-shadow: 0 0 8px 2px rgba(255, 224, 102, 0.25);
+  transform: scale(1.02);
+}
+
+.theme-brutalist .services-2-item:not(:hover) {
+  transition: box-shadow 0.15s ease-in, transform 0.15s ease-in;
+}
+
+/* Social links */
+.theme-brutalist .hs-social-link {
+  color: var(--color-fog-cream);
+  border-color: var(--color-raspberry-smoke);
+  transition: all 0.3s ease;
+}
+.theme-brutalist .hs-social-link:hover {
+  background-color: var(--color-dusky-plum);
+  border-color: var(--color-dusky-plum);
+  color: var(--color-fog-cream);
+}
+
+/* Navigation links */
+.theme-brutalist .inner-nav a {
+  color: var(--color-fog-cream);
+  transition: color 0.3s ease;
+}
+.theme-brutalist .inner-nav a:hover {
+  color: var(--color-dusty-rose);
+}
+
+/* Get in Touch button - Gold accent */
+.theme-brutalist .link-strong {
+  color: var(--color-dusky-plum);
+  transition: color 0.3s ease;
+}
+.theme-brutalist .link-strong:hover {
+  color: var(--color-glint-gold);
+}
+
+/* Footer styling */
+.theme-brutalist .footer-2 {
+  background-color: var(--color-charcoal-violet);
+}
+
+/* Header/Navigation - ensure it's not black */
+.theme-brutalist .main-nav.dark {
+  background-color: rgba(44, 43, 48, 0.95);
+}
+.theme-brutalist .main-nav.transparent {
+  background-color: transparent;
+}
+
+/* Section borders - use raspberry smoke instead of black */
+.theme-brutalist hr {
+  border-color: var(--color-raspberry-smoke);
+  opacity: 0.3;
+}
+
+/* Form inputs - better readability */
+.theme-brutalist .light-content input,
+.theme-brutalist .light-content textarea,
+.theme-brutalist .light-content select {
+  background-color: rgba(92, 71, 107, 0.3);
+  border-color: var(--color-raspberry-smoke);
+  color: var(--color-fog-cream);
+}
+.theme-brutalist .light-content input::placeholder,
+.theme-brutalist .light-content textarea::placeholder {
+  color: var(--color-fog-cream);
+  opacity: 0.6;
+}
+.theme-brutalist .light-content input:focus,
+.theme-brutalist .light-content textarea:focus {
+  border-color: var(--color-dusky-plum);
+  background-color: rgba(92, 71, 107, 0.5);
+}
+
+/* Gold sparkle accent - add to special elements */
+.theme-brutalist .gold-accent {
+  color: var(--color-glint-gold);
+}
+.theme-brutalist .section-title-image {
+  filter: brightness(0) saturate(100%) invert(80%) sepia(52%) saturate(1000%) hue-rotate(357deg) brightness(105%) contrast(104%);
+}
+
+/* Card/service item hover effects */
+.theme-brutalist .services-2-item:hover {
+  background-color: rgba(119, 89, 159, 0.1);
+  border-color: var(--color-dusky-plum);
+  transform: translateY(-4px);
+  transition: all 0.3s ease;
+}
+
+/* Portfolio/Blog card hovers */
+.theme-brutalist .portfolio-2-item:hover,
+.theme-brutalist .blog-item:hover {
+  transform: translateY(-4px);
+  transition: all 0.3s ease;
+}
+.theme-brutalist .portfolio-2-item:hover .portfolio-2-title,
+.theme-brutalist .blog-item:hover .blog-item-title {
+  color: var(--color-dusty-rose);
+}
+.theme-brutalist
+  .row:not(
+    .g-0,
+    .g-1,
+    .g-2,
+    .g-3,
+    .g-4,
+    .g-5,
+    .gx-0,
+    .gx-1,
+    .gx-2,
+    .gx-3,
+    .gx-4,
+    .gx-5,
+    .gy-0,
+    .gy-1,
+    .gy-2,
+    .gy-3,
+    .gy-4,
+    .gy-5
+  ) {
+  --bs-gutter-x: 24px;
+}
+/* .theme-brutalist h1,
+.theme-brutalist h2,
+.theme-brutalist h3,
+.theme-brutalist h4,
+.theme-brutalist h5,
+.theme-brutalist h6,
+.theme-brutalist .h1,
+.theme-brutalist .h2,
+.theme-brutalist .h3,
+.theme-brutalist .h4,
+.theme-brutalist .h5,
+.theme-brutalist .h6 {
+  font-weight: 600;
+} */
+.theme-brutalist .inner-nav ul {
+  font-size: 15px;
+  line-height: 1.6;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.theme-brutalist .form input[type="text"],
+.theme-brutalist .form input[type="email"],
+.theme-brutalist .form input[type="number"],
+.theme-brutalist .form input[type="url"],
+.theme-brutalist .form input[type="search"],
+.theme-brutalist .form input[type="tel"],
+.theme-brutalist .form input[type="password"],
+.theme-brutalist .form input[type="date"],
+.theme-brutalist .form input[type="color"],
+.theme-brutalist .form select {
+  padding-bottom: 1px;
+}
+.theme-brutalist .form input[type="text"]::placeholder,
+.theme-brutalist .form input[type="email"]::placeholder,
+.theme-brutalist .form input[type="number"]::placeholder,
+.theme-brutalist .form input[type="url"]::placeholder,
+.theme-brutalist .form input[type="search"]::placeholder,
+.theme-brutalist .form input[type="tel"]::placeholder,
+.theme-brutalist .form input[type="password"]::placeholder,
+.theme-brutalist .form input[type="date"]::placeholder,
+.theme-brutalist .form input[type="color"]::placeholder,
+.theme-brutalist .form select::placeholder {
+  color: #999;
+}
+.theme-brutalist .form label {
+  margin-bottom: 14px;
+  font-family: var(--font-alt);
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.theme-brutalist .form .form-group {
+  margin-bottom: 25px;
+}
+.theme-brutalist .form-tip,
+.theme-brutalist .form-tip a {
+  font-size: 13px;
+}
+.theme-brutalist .light-content .form input.newsletter-field {
+  border-color: rgba(255, 255, 255, 0.35);
+}
+.theme-brutalist .light-content .form input.newsletter-field:hover {
+  border-color: rgba(255, 255, 255, 0.5);
+}
+.theme-brutalist .light-content .form input.newsletter-field:focus {
+  border-color: rgba(255, 255, 255, 0.75);
+}
+.theme-brutalist .btn-mod,
+.theme-brutalist a.btn-mod {
+  font-family: var(--font-alt);
+  font-weight: 400;
+}
+.theme-brutalist .btn-mod.btn-small {
+  padding: 6px 14px 4px;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+}
+.theme-brutalist .btn-mod.btn-medium {
+  padding: 8px 16px 6px;
+  font-size: 15px;
+  font-weight: 400;
+  vertical-align: middle;
+  letter-spacing: 0.08em;
+}
+.theme-brutalist .btn-mod.btn-large {
+  padding: 15px 32px 13px 32px;
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+}
+.theme-brutalist .btn-mod.btn-border,
+.theme-brutalist .btn-mod.btn-border-w {
+  border-width: 1px;
+}
+.theme-brutalist .section-title-large {
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+}
+.theme-brutalist .section-title-descr {
+  font-size: 15px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+.theme-brutalist .light-content .section-title-descr {
+  color: #fff;
+}
+.theme-brutalist .link-strong {
+  font-family: var(--font-alt);
+  font-size: 15px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+}
+.theme-brutalist .link-strong svg {
+  position: relative;
+  top: -0.1em;
+  max-width: unset;
+  max-height: unset;
+  margin-left: 0.25em;
+}
+.theme-brutalist .post-prev-1-title {
+  font-weight: 500;
+}
+.theme-brutalist .widget-title {
+  font-weight: 600;
+}
+.theme-brutalist .blog-item-data {
+  font-size: 16px;
+}
+.theme-brutalist .blog-item-body {
+  font-size: 19px;
+  line-height: 1.65;
+  letter-spacing: -0.0125em;
+}
+.theme-brutalist .pagination a,
+.theme-brutalist .pagination span {
+  font-weight: 400;
+}
+.theme-brutalist .fw-social-inline .link-strong {
+  letter-spacing: 0.075em;
+}
+.theme-brutalist .footer-1 {
+  font-family: var(--font-alt);
+  text-transform: uppercase;
+  letter-spacing: 0.075em;
+}
+.theme-brutalist .features-2-item:before {
+  border: 1px solid var(--color-dark-1);
+  background: none;
+  opacity: 0.15;
+  transition: opacity 0.27s var(--ease-default);
+  z-index: -1;
+}
+.theme-brutalist .features-2-item:hover:before {
+  opacity: 1;
+}
+.theme-brutalist .features-2-label {
+  font-weight: 500;
+  color: var(--color-dark-1);
+  background: none;
+  -webkit-background-clip: unset;
+  -webkit-text-fill-color: unset;
+}
+.theme-brutalist .features-2-icon:before {
+  background: var(--color-gray-light-1);
+  opacity: 1;
+  z-index: -1;
+}
+.theme-brutalist .features-2-icon svg {
+  fill: var(--color-dark-1);
+}
+.theme-brutalist .light-content .features-2-item:before {
+  background: var(--color-dark-mode-gray-2);
+  border: 1px solid var(--color-dark-mode-gray-2);
+  transition: border-color 0.27s var(--ease-default);
+  opacity: 1;
+  z-index: -1;
+}
+.theme-brutalist .light-content .features-2-item:hover:before {
+  background: var(--color-dark-mode-gray-2);
+  opacity: 1;
+}
+.theme-brutalist .light-content .features-2-label {
+  color: #fff;
+  background: none;
+  -webkit-background-clip: unset;
+  -webkit-text-fill-color: unset;
+}
+.theme-brutalist .light-content .features-2-icon {
+  color: #fff;
+}
+.theme-brutalist .light-content .features-2-icon svg {
+  fill: #fff;
+}
+.theme-brutalist .light-content .features-2-icon:before {
+  background: var(--color-dark-mode-gray-2);
+  opacity: 1;
+  z-index: -1;
+}
+.theme-brutalist .light-content .features-2-descr {
+  color: var(--color-dark-mode-gray-1);
+}
+.theme-brutalist .bg-border-gradient:before {
+  background: none;
+  border: 1px solid var(--color-dark-1);
+  opacity: 0.15;
+}
+.theme-brutalist .light-content .bg-border-gradient:before {
+  background: none;
+  border: 1px solid #fff;
+  opacity: 0.25;
+}
+.theme-brutalist .bg-gradient-dark-alpha-1:before {
+  opacity: 0.9;
+}
+.theme-brutalist .bg-gradient-dark-alpha-2:before {
+  opacity: 0.9;
+}
+.theme-brutalist .row.gx-huge {
+  --bs-gutter-x: 170px;
+}
+.theme-brutalist .features-1-title {
+  font-weight: 600;
+  letter-spacing: -0.03em;
+}
+.theme-brutalist .work-navigation a,
+.theme-brutalist .work-navigation a:visited {
+  color: var(--color-dark-1);
+}
+@media only screen and (min-width: 1441px) {
+  .theme-brutalist {
+    --container-width: 1360px;
+  }
+}
+@media only screen and (min-width: 1681px) {
+  .theme-brutalist {
+    --container-width: 1500px;
+  }
+}
+@media only screen and (max-width: 1366px) {
+  .theme-brutalist {
+    --section-padding-y: 140px;
+  }
+  .theme-brutalist .row.gx-huge {
+    --bs-gutter-x: calc(-0.802rem + 13.38vw);
+  }
+}
+
+/* Floating animation for decorative elements */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-10px) rotate(2deg);
+  }
+  50% {
+    transform: translateY(-5px) rotate(-2deg);
+  }
+  75% {
+    transform: translateY(-15px) rotate(1deg);
+  }
+}
+
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(-3deg);
+  }
+}
