@@ -194,8 +194,6 @@ export const brutalistMultipageDark = [
   { href: "/pricing", text: "Pricing", active: false },
   { href: "/blog", text: "Blog", active: false },
   { href: "/contact", text: "Contact", active: false },
-  { href: "https://coachkaty-portal.sanity.studio", text: "Studio", active: false, external: true },
-  { href: "/portal/login", text: "Client Portal", active: false },
 ];
 export const brutalistOnepage = [
   { href: "#home", text: "Home", className: "active", dataBtnAnimate: "y" },
