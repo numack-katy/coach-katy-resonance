@@ -360,7 +360,7 @@ export default function MainAboutPage1Dark() {
                         </p>
                         <div style={{position: 'relative', zIndex: 1}}>
                           <Link
-                            href="/brutalist-booking-dark"
+                            href="/booking"
                             className="btn btn-mod btn-large btn-w btn-hover-anim"
                           >
                             <span>Book Free Consultation</span>
@@ -422,7 +422,7 @@ export default function MainAboutPage1Dark() {
                         </p>
                         <div>
                           <Link
-                            href="/brutalist-contact-dark"
+                            href="/contact"
                             className="btn btn-mod btn-large btn-w btn-hover-anim"
                           >
                             <span>Contact Me</span>

@@ -75,7 +75,7 @@ export default function Home3({ onePage = false, dark = false }) {
           >
             <div className="col-5 offset-7 col-sm-4 offset-sm-8">
               <Image
-                src="/image11.webp"
+                src="/Image11.webp"
                 width={689}
                 height={855}
                 className="section-image-1"
@@ -128,7 +128,7 @@ export default function Home3({ onePage = false, dark = false }) {
                   One-on-one coaching that's collaborative and affirming. Simple structure, practical tools.
                 </div>
                 <div className="services-2-link">
-                  <Link href="/brutalist-services-dark" className="link-hover-anim" data-link-animate="y">
+                  <Link href="/services" className="link-hover-anim" data-link-animate="y">
                     <span className="link-strong link-strong-unhovered">Learn more</span>
                     <span className="link-strong link-strong-hovered">Learn more</span>
                   </Link>
@@ -146,7 +146,7 @@ export default function Home3({ onePage = false, dark = false }) {
                   Late-diagnosed autistic coach with a social-work background. How I arrived here and how I work.
                 </div>
                 <div className="services-2-link">
-                  <Link href="/brutalist-about-dark" className="link-hover-anim" data-link-animate="y">
+                  <Link href="/about" className="link-hover-anim" data-link-animate="y">
                     <span className="link-strong link-strong-unhovered">Read my story</span>
                     <span className="link-strong link-strong-hovered">Read my story</span>
                   </Link>
@@ -164,7 +164,7 @@ export default function Home3({ onePage = false, dark = false }) {
                   Transparent tiers so cost isn't a barrier. Pick the level that fits your budget.
                 </div>
                 <div className="services-2-link">
-                  <Link href="/main-pages-pricing-1-dark" className="link-hover-anim" data-link-animate="y">
+                  <Link href="/pricing" className="link-hover-anim" data-link-animate="y">
                     <span className="link-strong link-strong-unhovered">View pricing</span>
                     <span className="link-strong link-strong-hovered">View pricing</span>
                   </Link>
@@ -417,7 +417,7 @@ export default function Home3({ onePage = false, dark = false }) {
               </p>
               <div className="wow fadeInUp" data-wow-delay="0.2s">
                 <Link
-                  href="/brutalist-booking-dark"
+                  href="/booking"
                   className="btn btn-mod btn-large btn-w btn-hover-anim"
                 >
                   <span>Schedule Your Free Consultation</span>

@@ -248,7 +248,7 @@ export default function BrutalistBookingPageDark() {
                         </p>
                         <div>
                           <a
-                            href="/brutalist-contact-dark"
+                            href="/contact"
                             className="btn btn-mod btn-large btn-w btn-hover-anim"
                           >
                             <span>Contact Me</span>

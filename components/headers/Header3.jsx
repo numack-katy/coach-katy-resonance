@@ -14,7 +14,7 @@ export default function Header3({ links }) {
       <div className="nav-logo-wrap local-scroll">
         <a href="/home" className="logo font-alt" style={{padding: '10px'}}>
           <Image
-            src="/coach.svg"
+            src="/Coach.svg"
             alt="Coach Katy - Neurodivergent Life Coach"
             width={200}
             height={167}
@@ -43,7 +43,7 @@ export default function Header3({ links }) {
           <Nav animateY links={links} />
           <li>
             {links[0]?.subMenu ? (
-              <Link href="/brutalist-booking-dark" className="opacity-1 no-hover">
+              <Link href="/booking" className="opacity-1 no-hover">
                 <span
                   className="btn btn-mod btn-medium btn-border-w btn-circle-alt"
                   data-btn-animate="y"

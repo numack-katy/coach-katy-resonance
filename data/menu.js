@@ -188,12 +188,13 @@ export const brutalistMultipage = [
   { href: "/brutalist-blog", text: "Blog", active: false },
 ];
 export const brutalistMultipageDark = [
-  { href: "/brutalist-multi-page-dark", text: "Home", active: true },
-  { href: "/brutalist-about-dark", text: "About", active: false },
-  { href: "/brutalist-services-dark", text: "Services", active: false },
-  { href: "/main-pages-pricing-1-dark", text: "Pricing", active: false },
-  { href: "/brutalist-blog-dark", text: "Blog", active: false },
-  { href: "/brutalist-contact-dark", text: "Contact", active: false },
+  { href: "/home", text: "Home", active: true },
+  { href: "/about", text: "About", active: false },
+  { href: "/services", text: "Services", active: false },
+  { href: "/pricing", text: "Pricing", active: false },
+  { href: "/blog", text: "Blog", active: false },
+  { href: "/contact", text: "Contact", active: false },
+  { href: "/booking", text: "Booking", active: false },
 ];
 export const brutalistOnepage = [
   { href: "#home", text: "Home", className: "active", dataBtnAnimate: "y" },

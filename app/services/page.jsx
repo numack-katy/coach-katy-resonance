@@ -112,7 +112,7 @@ export default function BrutalistServicesPageDark() {
                           I offer a free 30-minute consult for all new clients. It's a chance for us to see if we click, talk about what's bringing you to coaching, and decide if moving forward feels right. There's no pressure to book after the call—just an open conversation to see what you need.
                         </div>
                         <div className="services-2-link">
-                          <Link href="/brutalist-booking-dark" className="link-hover-anim" data-link-animate="y">
+                          <Link href="/booking" className="link-hover-anim" data-link-animate="y">
                             <span className="link-strong link-strong-unhovered">Get Started</span>
                             <span className="link-strong link-strong-hovered">Get Started</span>
                           </Link>
@@ -130,7 +130,7 @@ export default function BrutalistServicesPageDark() {
                           I believe neurodivergent coaching should be accessible to everyone. I offer sliding-scale pricing and flexible package options to fit different needs and budgets. Whether you're looking for a single session or ongoing support, we'll find something that works for you. My goal is to make autistic and ADHD coaching sustainable—not exclusive. Learn more about my pricing structure and find the right fit for your situation.
                         </div>
                         <div className="services-2-link">
-                          <Link href="/main-pages-pricing-1-dark" className="link-hover-anim" data-link-animate="y">
+                          <Link href="/pricing" className="link-hover-anim" data-link-animate="y">
                             <span className="link-strong link-strong-unhovered">View Pricing</span>
                             <span className="link-strong link-strong-hovered">View Pricing</span>
                           </Link>
@@ -398,7 +398,7 @@ export default function BrutalistServicesPageDark() {
                         </p>
                         <div>
                           <Link
-                            href="/brutalist-booking-dark"
+                            href="/booking"
                             className="btn btn-mod btn-large btn-w btn-hover-anim"
                           >
                             <span>Book Your Free Consultation</span>
