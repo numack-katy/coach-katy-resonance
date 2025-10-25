@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 
 import Banner from "./Banner";
@@ -13,6 +12,7 @@ import Image from "next/image";
 import { qualities } from "@/data/features";
 import AnimatedText from "@/components/common/AnimatedText";
 import CrisisResources from "./CrisisResources";
+import BookingButton from "@/components/common/BookingButton";
 export default function Home3({ onePage = false, dark = false }) {
   return (
     <>
@@ -418,21 +418,7 @@ export default function Home3({ onePage = false, dark = false }) {
                 All clients start with a free call to make sure we click.
               </p>
               <div className="wow fadeInUp" data-wow-delay="0.2s">
-                <style jsx>{`
-                  .cta-button-wrapper .btn:hover {
-                    background-color: #77599f !important;
-                    color: #f9f5f0 !important;
-                    border-color: #77599f !important;
-                  }
-                `}</style>
-                <div className="cta-button-wrapper">
-                  <Link
-                    href="/booking"
-                    className="btn btn-mod btn-large btn-w btn-hover-anim"
-                  >
-                    <span>Schedule Your Free Consultation</span>
-                  </Link>
-                </div>
+                <BookingButton />
               </div>
             </div>
           </div>
