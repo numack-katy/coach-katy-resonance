@@ -1,9 +1,11 @@
 /* Prevent flash of unstyled content - use visibility to not interfere with WOW.js animations */
 body {
-  visibility: hidden;
+  visibility: visible;
+  opacity: 1;
 }
 body.loaded {
   visibility: visible;
+  opacity: 1;
 }
 
 .Typewriter,
@@ -105,4 +107,40 @@ a {
 }
 html {
   scroll-behavior: smooth !important;
+}
+
+/* Ensure titles are always visible (but allow WOW animations to work) */
+h1, h2, h3, h4, h5, h6 {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* Fallback for when animations don't load */
+.no-animate {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: none !important;
+}
+
+
+
+/* Ensure animated text is visible when not using WOW */
+.charsAnimIn .char,
+.charsAnimInLong .char,
+.linesAnimInLong .word {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: none !important;
+}
+
+/* Safety fallback - if WOW.js fails to load, make content visible after 3 seconds */
+.wow:not(.animated):not(.no-animate) {
+  animation: fallback-fade-in 0.5s ease-in-out 3s forwards;
+}
+
+@keyframes fallback-fade-in {
+  to {
+    opacity: 1;
+    visibility: visible;
+  }
 }

@@ -10,9 +10,7 @@ export default function ClientLayout({ children }) {
 
   useEffect(() => {
     // Add loaded class immediately for faster visual feedback
-    requestAnimationFrame(() => {
-      document.body.classList.add('loaded');
-    });
+    document.body.classList.add('loaded');
 
     // Re-enable WOW.js
     init_wow();

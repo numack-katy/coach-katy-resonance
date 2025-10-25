@@ -45,7 +45,7 @@ export default function RootLayout({ children }) {
           defer
         />
       </head>
-      <body className="appear-animate body">
+      <body className="appear-animate body loaded">
         <ClientLayout>{children}</ClientLayout>
       </body>
     </html>

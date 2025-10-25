@@ -1,5 +1,6 @@
 export function init_wow() {
   const { WOW } = require("wowjs");
+  
   // Reduced delay from 400ms to 100ms for smoother initial load
   setTimeout(() => {
     /* Wow init */
@@ -12,10 +13,12 @@ export function init_wow() {
       boxClass: "wow",
       animateClass: "animated",
       offset: 100,
-
       live: false,
       callback: function (box) {
         box.classList.add("animated");
+        // Ensure element is visible after animation
+        box.style.opacity = "1";
+        box.style.visibility = "visible";
       },
     });
 
@@ -24,7 +27,10 @@ export function init_wow() {
     } else {
       document
         .querySelectorAll(".wow")
-        .forEach((el) => (el.style.opacity = "1"));
+        .forEach((el) => {
+          el.style.opacity = "1";
+          el.style.visibility = "visible";
+        });
     }
 
     /* Wow for portfolio init */
@@ -37,10 +43,12 @@ export function init_wow() {
       boxClass: "wow-p",
       animateClass: "animated",
       offset: 100,
-
       live: false,
       callback: function (box) {
         box.classList.add("animated");
+        // Ensure element is visible after animation
+        box.style.opacity = "1";
+        box.style.visibility = "visible";
       },
     });
 
@@ -49,7 +57,10 @@ export function init_wow() {
     } else {
       document
         .querySelectorAll(".wow-p")
-        .forEach((el) => (el.style.opacity = "1"));
+        .forEach((el) => {
+          el.style.opacity = "1";
+          el.style.visibility = "visible";
+        });
     }
 
     /* Wow for menu bar init */
@@ -60,6 +71,8 @@ export function init_wow() {
     ) {
       document.querySelectorAll(".wow-menubar").forEach((el) => {
         el.classList.add("no-animate", "fadeInDown", "animated");
+        el.style.opacity = "1";
+        el.style.visibility = "visible";
         setInterval(() => {
           el.classList.remove("no-animate");
         }, 1500);
@@ -67,7 +80,10 @@ export function init_wow() {
     } else {
       document
         .querySelectorAll(".wow-menubar")
-        .forEach((el) => (el.style.opacity = "1"));
+        .forEach((el) => {
+          el.style.opacity = "1";
+          el.style.visibility = "visible";
+        });
     }
   }, 100);
 }
