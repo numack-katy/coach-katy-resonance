@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 
 import Banner from "./Banner";
@@ -13,6 +14,7 @@ import { qualities } from "@/data/features";
 import AnimatedText from "@/components/common/AnimatedText";
 import CrisisResources from "./CrisisResources";
 import BookingButton from "@/components/common/BookingButton";
+
 export default function Home3({ onePage = false, dark = false }) {
   return (
     <>
@@ -45,13 +47,10 @@ export default function Home3({ onePage = false, dark = false }) {
           <div className="row page-section relative z-index-1">
             <div className="col-sm-9">
               <h2 className="section-title-large font-alt uppercase mb-60 mb-md-50 mb-sm-30">
-                <span className="wow charsAnimInLong" data-splitting="chars">
-                  <AnimatedText text="Meet Katy" />
-                </span>
+                <AnimatedText text="Meet Katy" />
               </h2>
               <p
-                className="section-descr-large mb-60 mb-sm-40 wow fadeInUp"
-                data-wow-delay="0.1s"
+                className="section-descr-large mb-60 mb-sm-40"
               >
                 Late-diagnosed autistic. Former therapist.
                 I coach neurodivergent adults from lived experience,
@@ -59,8 +58,7 @@ export default function Home3({ onePage = false, dark = false }) {
                 and grounded in reality.
               </p>
               <ul
-                className="section-features font-alt clearlist uppercase wow fadeInUp"
-                data-wow-delay="0.2s"
+                className="section-features font-alt clearlist uppercase"
               >
                 {qualities.map((quality, index) => (
                   <li key={index}>{quality}</li>
@@ -111,16 +109,14 @@ export default function Home3({ onePage = false, dark = false }) {
           <div className="row mb-80 mb-md-50">
             <div className="col-12 text-center">
               <h2 className="section-title-large font-alt uppercase mb-0 mb-sm-30 mark-decoration-2">
-                <span className="wow charsAnimInLong" data-splitting="chars">
-                  START HERE
-                </span>
+                START HERE
               </h2>
             </div>
           </div>
 
           {/* Service Cards */}
           <div className="row align-items-stretch">
-            <div className="col-lg-4 mb-md-50 wow fadeInUp" data-wow-delay="0.1s">
+            <div className="col-lg-4 mb-md-50">
               <div className="services-2-item h-100 d-flex flex-column" style={{backgroundColor: 'rgba(119, 89, 159, 0.15)', border: '1px solid rgba(119, 89, 159, 0.3)'}}>
                 <div className="services-2-icon" style={{color: '#ffe066'}}>
                   <Image src="/yellowstar.svg" width="32" height="32" alt="Star" />
@@ -138,7 +134,7 @@ export default function Home3({ onePage = false, dark = false }) {
               </div>
             </div>
 
-            <div className="col-lg-4 mb-md-50 wow fadeInUp" data-wow-delay="0.2s">
+            <div className="col-lg-4 mb-md-50">
               <div className="services-2-item h-100 d-flex flex-column" style={{backgroundColor: 'rgba(119, 89, 159, 0.15)', border: '1px solid rgba(119, 89, 159, 0.3)'}}>
                 <div className="services-2-icon" style={{color: '#ffe066'}}>
                   <Image src="/yellowstar.svg" width="32" height="32" alt="Star" />
@@ -156,7 +152,7 @@ export default function Home3({ onePage = false, dark = false }) {
               </div>
             </div>
 
-            <div className="col-lg-4 mb-md-50 wow fadeInUp" data-wow-delay="0.3s">
+            <div className="col-lg-4 mb-md-50">
               <div className="services-2-item h-100 d-flex flex-column" style={{backgroundColor: 'rgba(119, 89, 159, 0.15)', border: '1px solid rgba(119, 89, 159, 0.3)'}}>
                 <div className="services-2-icon" style={{color: '#ffe066'}}>
                   <Image src="/yellowstar.svg" width="32" height="32" alt="Star" />
@@ -205,13 +201,11 @@ export default function Home3({ onePage = false, dark = false }) {
           <div className="row mb-80 mb-md-50">
             <div className="col-md-5">
               <h2 className="section-title-large font-alt uppercase mb-0 mb-sm-30">
-                <span className="wow charsAnimInLong" data-splitting="chars">
-                  <AnimatedText text="Values That Guide Me" />
-                </span>
+                <AnimatedText text="Values That Guide Me" />
               </h2>
             </div>
             <div className="col-md-7">
-              <p className="section-descr-large mb-0 wow fadeInUp">
+              <p className="section-descr-large mb-0">
                 These principles shape how I show up for every client and every session.
               </p>
             </div>
@@ -220,7 +214,7 @@ export default function Home3({ onePage = false, dark = false }) {
           {/* Values Services Layout */}
           <div className="mt-n30">
             {/* Value 1: Lived Experience */}
-            <div className="service-2-item pt-30 pt-md-20 wow fadeInUp" data-wow-delay="0.1s">
+            <div className="service-2-item pt-30 pt-md-20">
               <div className="services-2-button active">
                 <div className="row">
                   <div className="col-12">
@@ -238,7 +232,7 @@ export default function Home3({ onePage = false, dark = false }) {
             </div>
 
             {/* Value 2: Empathetic Approach */}
-            <div className="service-2-item pt-30 pt-md-20 wow fadeInUp" data-wow-delay="0.2s">
+            <div className="service-2-item pt-30 pt-md-20">
               <div className="services-2-button active">
                 <div className="row">
                   <div className="col-12">
@@ -256,7 +250,7 @@ export default function Home3({ onePage = false, dark = false }) {
             </div>
 
             {/* Value 3: Collaborative */}
-            <div className="service-2-item pt-30 pt-md-20 wow fadeInUp" data-wow-delay="0.3s">
+            <div className="service-2-item pt-30 pt-md-20">
               <div className="services-2-button active">
                 <div className="row">
                   <div className="col-12">
@@ -317,13 +311,11 @@ export default function Home3({ onePage = false, dark = false }) {
           <div className="row mb-80 mb-md-50">
             <div className="col-md-5">
               <h2 className="section-title-large font-alt uppercase mb-0 mb-sm-30">
-                <span className="wow charsAnimInLong" data-splitting="chars">
-                  <AnimatedText text="Client Voices" />
-                </span>
+                <AnimatedText text="Client Voices" />
               </h2>
             </div>
             <div className="col-md-7">
-              <p className="section-descr-large mb-0 wow fadeInUp">
+              <p className="section-descr-large mb-0">
                 Words from those I've worked with — reflections on connection, trust, and growth.
               </p>
             </div>
@@ -331,7 +323,7 @@ export default function Home3({ onePage = false, dark = false }) {
 
           {/* Testimonials Grid */}
           <div className="row">
-            <div className="col-lg-6 mb-md-50 wow fadeInUp" data-wow-delay="0.1s">
+            <div className="col-lg-6 mb-md-50">
               <div className="services-2-item h-100">
                 <div className="services-2-text mb-30">
                   <blockquote className="mb-0">
@@ -342,7 +334,7 @@ export default function Home3({ onePage = false, dark = false }) {
               </div>
             </div>
 
-            <div className="col-lg-6 mb-md-50 wow fadeInUp" data-wow-delay="0.2s">
+            <div className="col-lg-6 mb-md-50">
               <div className="services-2-item h-100">
                 <div className="services-2-text mb-30">
                   <blockquote className="mb-0">
@@ -411,13 +403,13 @@ export default function Home3({ onePage = false, dark = false }) {
         <div className="container position-relative text-center">
           <div className="row">
             <div className="col-lg-8 offset-lg-2">
-              <h2 className="section-title-large font-alt uppercase mb-60 mb-md-40 wow charsAnimInLong" data-splitting="chars">
+              <h2 className="section-title-large font-alt uppercase mb-60 mb-md-40" data-splitting="chars">
                 <AnimatedText text="Ready to Book?" />
               </h2>
-              <p className="section-descr-large mb-60 mb-md-40 wow fadeInUp" data-wow-delay="0.1s">
+              <p className="section-descr-large mb-60 mb-md-40">
                 All clients start with a free call to make sure we click.
               </p>
-              <div className="wow fadeInUp" data-wow-delay="0.2s">
+              <div>
                 <BookingButton />
               </div>
             </div>

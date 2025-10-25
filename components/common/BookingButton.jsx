@@ -4,13 +4,13 @@ import Link from "next/link";
 export default function BookingButton() {
   return (
     <>
-      <style jsx>{`
+      <style dangerouslySetInnerHTML={{__html: `
         .cta-button-wrapper .btn:hover {
           background-color: #77599f !important;
           color: #f9f5f0 !important;
           border-color: #77599f !important;
         }
-      `}</style>
+      `}} />
       <div className="cta-button-wrapper">
         <Link
           href="/booking"

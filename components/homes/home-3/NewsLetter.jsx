@@ -5,7 +5,7 @@ export default function NewsLetter() {
     <>
       <div className="container position-relative">
         <div className="row">
-          <div className="col-lg-8 offset-lg-2 wow fadeInUp">
+          <div className="col-lg-8 offset-lg-2">
             <div className="row">
               <div className="col-lg-9 col-xl-6">
                 <h2 className="section-title-small font-alt mb-40 mb-md-20" style={{color: '#f9f5f0'}}>

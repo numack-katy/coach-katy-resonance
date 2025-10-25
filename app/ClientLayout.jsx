@@ -14,7 +14,9 @@ export default function ClientLayout({ children }) {
       document.body.classList.add('loaded');
     });
 
+    // Re-enable WOW.js
     init_wow();
+
     parallaxMouseMovement();
     var mainNav = document.querySelector(".main-nav");
     if (mainNav?.classList.contains("transparent")) {
