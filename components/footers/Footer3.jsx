@@ -109,6 +109,17 @@ export default function Footer3() {
               <span className="link-strong link-strong-hovered" aria-hidden="true">Terms</span>
             </a>
           </div>
+          <div className="fw-social-inline-item">
+            <a
+              href="/home#crisis-resources"
+              className="link-hover-anim align-middle"
+              data-link-animate="y"
+              style={{fontSize: '14px', opacity: 0.9, color: '#77599f'}}
+            >
+              <span className="link-strong link-strong-unhovered">Crisis Resources</span>
+              <span className="link-strong link-strong-hovered" aria-hidden="true">Crisis Resources</span>
+            </a>
+          </div>
         </div>
         {/* End Footer Navigation */}
         <div
